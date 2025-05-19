@@ -4,4 +4,4 @@
 
 This notes app was built by me using HTML, CSS and JavaScript
 
-https://light-dark-notes-app.vercel.app/
+Live Demo (https://light-dark-notes-app.vercel.app/)
