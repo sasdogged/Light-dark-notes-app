@@ -1,0 +1,118 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --base-color: #7bdaf3;
+    --text-color:#000;
+    --accent-color:#9ec862;
+    --base-variant:#fff;
+    --text-color2:#fff;
+    --base-variant2: #E7FDEB;
+}
+.dark-mode{
+    --base-color:#000;
+    --text-color: #000;
+    --accent-color:hsl(40, 100%, 46%);
+    --base-variant:#fff;
+    --text-color2:#fff;
+    --base-variant2: #5C5C5C;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: var(--base-color);
+}
+/* Light/Dark theme switcher */
+#theme-switch{
+    background-color: var(--base-variant2);
+    border: none;
+    outline: 0;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    position: fixed;
+    right: 8px;
+    bottom: 10px;
+}
+#theme-switch:hover{
+    transform: scale(1.07);
+}
+#theme-switch img:last-child{
+    display: none;
+}
+.dark-mode #theme-switch img:first-child{
+    display: none;
+}
+.dark-mode #theme-switch img:last-child{
+    display: block;
+}
+
+.notes-logo{
+    margin: 1.3em 0 0 1.6em;
+    gap: .3em;
+}
+/* Add notes button */
+.container .button-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+.button-container button{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-size: .88rem;
+    font-weight: 600;
+    padding: .5em .9em;
+    margin: 1.2em 0 0 1.6em;
+    background: var(--accent-color);
+    color: var(--text-color2);
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+.button-container .Btn:hover{
+    transform: scale(1.1);
+}
+/* Notes container */
+.notes-container{
+    margin-inline: 2em;
+    margin-top: 4em;
+}
+.notes-container .note-box{
+    width: 100%;
+    max-width: 350px;
+    min-height: 320px;
+    background-color: var(--base-variant) ;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: .6em .9em;
+    outline: none;
+    border: none;
+    margin-block-end: 1em;
+    word-wrap: break-word;
+}
+.notes-container span{
+    position: relative;
+    display: block;
+    background-color: var(--accent-color);
+    height: 30px;
+    width: 100%;
+    max-width: 350px;
+    padding: .3em .9em;
+}
+.notes-container img{
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    width: 20px;
+}
